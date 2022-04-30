@@ -23,8 +23,7 @@ def min15_to_hour1(candles):
         endIndex = endIndex + 4
 
     return mergedData
-        
-           
+         
 
 def get_dataframe(symbol, interval):
     parameters = {'symbol': symbol, 'interval': interval}    
