@@ -19,5 +19,3 @@ def insertData(data, table):
     for i in range(len(data)): 
         cursor.execute("INSERT INTO " + table + "(time_stamp, open_price, high, low, close_price) VALUES(%s, %s, %s, %s, %s)", (datetime.datetime.fromtimestamp(float(data[i][0]) / 1e3), float(data[i][1]), float(data[i][2]), float(data[i][3]), float(data[i][4])))
         connection.commit()
-        
-        print ("commited:", data[i][0], data[i][1], data[i][2], data[i][3], data[i][4])
